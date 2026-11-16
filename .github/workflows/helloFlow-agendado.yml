@@ -1,0 +1,14 @@
+name: Hello Flow Agendado
+on:
+  schedule:
+    - cron: '3-59/5 * * * *'
+permissions:
+  contents: read
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Diga oi
+        run: echo "Hello World!"
+      - name: Diga valeu
+        run: echo "Valeu - bye!"
